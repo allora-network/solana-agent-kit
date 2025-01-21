@@ -117,6 +117,8 @@ import {
   get_asset,
   get_assets_by_authority,
   get_assets_by_creator,
+  getInference,
+  getAllTopics,
 } from "../tools";
 import {
   Config,
@@ -1021,5 +1023,11 @@ export class SolanaAgentKit {
     params: GetAssetsByCreatorRpcInput,
   ): Promise<DasApiAssetList> {
     return get_assets_by_creator(this, params);
+  }
+  async getInference(tokenSymbol: string, timeframe: string): Promise<string> {
+    return getInference(this, tokenSymbol, timeframe);
+  }
+  async getAllTopics(): Promise<string> {
+    return getAllTopics(this);
   }
 }

@@ -504,6 +504,16 @@ const signature = await agent.voltrWithdrawStrategy(
 const asset = await agent.getAsset("41Y8C4oxk4zgJT1KXyQr35UhZcfsp5mP86Z2G7UUzojU")
 ```
 
+### Get a price inference from Allora
+
+Get the inference for a given token and timeframe from Allora's API
+
+```typescript
+const sol5mPrice = await agent.getInference("SOL", "5m")
+console.log("5m price prediction of SOL/USD:", sol5mPrice);
+```
+
+
 ## Examples
 
 ### LangGraph Multi-Agent System
